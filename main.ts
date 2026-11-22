@@ -11,7 +11,7 @@ const WANT_W = 1024;
 const WANT_H = 1024;
 const PNG_MAGIC = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
 
-const src = join(process.cwd(), "entry.png");
+const src = new URL('./entry.png', import.meta.url);
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 const dst = join(outDir, "entry.png");
 
